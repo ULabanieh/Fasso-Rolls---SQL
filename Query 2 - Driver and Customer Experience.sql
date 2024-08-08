@@ -89,7 +89,7 @@ GROUP BY order_id) b ON a.order_id = b.order_id;
 -- What is the successful delivery percentage for each driver?
 -- sdp = total orders successfully delivered/total orders taken
 
-SELECT driver_id, s*1.0/t cancelled_pctg
+SELECT driver_id, s*1.0/t sdp
 FROM
 (SELECT driver_id, SUM(cancel_pctg) s, COUNT(driver_id) t
 FROM(SELECT driver_id,

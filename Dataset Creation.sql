@@ -56,6 +56,7 @@ INSERT INTO driver_order(order_id,driver_id,pickup_time,distance,duration,cancel
 
 drop table if exists customer_orders;
 CREATE TABLE customer_orders(order_id integer,customer_id integer,roll_id integer,not_include_items VARCHAR(4),extra_items_included VARCHAR(4),order_date datetime);
+
 INSERT INTO customer_orders(order_id,customer_id,roll_id,not_include_items,extra_items_included,order_date)
 values (1,101,1,'','','01-01-2021  18:05:02'),
 (2,101,1,'','','01-01-2021 19:00:52'),

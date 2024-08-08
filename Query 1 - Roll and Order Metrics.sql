@@ -70,8 +70,6 @@ FROM(
 WHERE rnk = 1;
 
 
--- For each customer, how many delivered rolls had at least 1 change and how many had no changes?
-
 -- Data cleaning customer_orders
 WITH temp_customer_orders(order_id,customer_id,roll_id,not_include_items,extra_items_included,order_date) AS (
 	SELECT order_id, customer_id, roll_id, 
@@ -86,9 +84,8 @@ WITH temp_customer_orders(order_id,customer_id,roll_id,not_include_items,extra_i
 		order_date
 	FROM customer_orders)
 	,
-
 -- Data cleaning driver_orders
-temp_driver_order (order_id,driver_id,pickup_time,distance,duration, new_cancellation) AS(
+temp_driver_order (order_id, driver_id, pickup_time, distance, duration, new_cancellation) AS(
 SELECT order_id, driver_id, pickup_time, distance, duration, 
 	CASE WHEN cancellation in ('Cancellation', 'Customer Cancellation')
 		THEN '0'
@@ -96,7 +93,7 @@ SELECT order_id, driver_id, pickup_time, distance, duration,
 	END AS new_cancellation
 FROM driver_order)
 
-
+-- For each customer, how many delivered rolls had at least 1 change and how many had no changes?
 SELECT customer_id, chg_no_chg, COUNT(order_id) count_orders
 FROM(
 SELECT *, 
@@ -109,7 +106,8 @@ WHERE order_id IN(
 	SELECT order_id
 	FROM temp_driver_order
 	WHERE new_cancellation !=0))a
-GROUP BY customer_id, chg_no_chg;
+GROUP BY customer_id, chg_no_chg
+ORDER BY customer_id;
 
 -- How many rolls were delivered that had both exclusions and extras?
 WITH temp_customer_orders(order_id,customer_id,roll_id,not_include_items,extra_items_included,order_date) AS (
