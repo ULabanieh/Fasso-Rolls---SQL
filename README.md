@@ -43,7 +43,7 @@ values (1,101,1,'','','01-01-2021  18:05:02'),
 
 Output dataset: 
 
-![[1446-02-03 09_24_39-Dataset Creation.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls (DESKTOP-UI79E1.png]]
+![1446-02-03 09_24_39-Dataset Creation sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls (DESKTOP-UI79E1](https://github.com/user-attachments/assets/303706bd-471b-4524-ada9-730497a2492c)
 
 
 # Roll and Order Metrics
@@ -60,7 +60,8 @@ FROM customer_orders;
 
 Output:
 
-![[1446-02-03 09_29_11-Query 1 - Roll Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls (DESKTOP-.png]]
+![1446-02-03 09_29_11-Query 1 - Roll Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls (DESKTOP-](https://github.com/user-attachments/assets/3a940556-d773-4541-8a76-3f9850420931)
+
 
 
 #### How many unique customer orders were made?
@@ -73,7 +74,8 @@ FROM customer_orders;
 
 Output: 
 
-![[1446-02-03 09_31_07-Query 1 - Roll Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls (DESKTOP-.png]]
+![1446-02-03 09_31_07-Query 1 - Roll Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls (DESKTOP-](https://github.com/user-attachments/assets/010466ef-46b6-43b2-9d25-08cd4a4c8e9b)
+
 
 #### How many successful orders were delivered by each driver?
 ---
@@ -87,7 +89,8 @@ GROUP BY driver_id;
 
 Output: 
 
-![[1446-02-03 09_34_46-Query 1 - Roll and Order Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls.png]]
+![1446-02-03 09_34_46-Query 1 - Roll and Order Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls](https://github.com/user-attachments/assets/e0cdd017-7d73-4150-a46e-945605b740df)
+
 
 
 
@@ -110,7 +113,8 @@ GROUP BY roll_id;
 
 Output:
 
-![[1446-02-03 09_36_54-Query 1 - Roll and Order Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls.png]]
+![1446-02-03 09_36_54-Query 1 - Roll and Order Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls](https://github.com/user-attachments/assets/500a357b-5e6e-4b55-a711-4d3d789ec82f)
+
 
 
 #### For each customer, how many delivered rolls had at least 1 change and how many had no changes? (with temp table and CTE)
@@ -159,7 +163,8 @@ ORDER BY customer_id
 
 Output: 
 
-![[1446-02-03 09_45_43-Query 1 - Roll and Order Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls.png]]
+![1446-02-03 09_45_43-Query 1 - Roll and Order Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls](https://github.com/user-attachments/assets/aefea80e-ac44-4dce-aa61-16edc76ce61a)
+
 
 
 #### What was the number of orders for each day of the week?
@@ -174,7 +179,8 @@ GROUP BY dow;
 
 Output:
 
-![[1446-02-03 15_22_57-Query 1 - Roll and Order Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls.png]]
+![1446-02-03 15_22_57-Query 1 - Roll and Order Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls](https://github.com/user-attachments/assets/298cab29-1914-4d82-91f7-109895ba27d3)
+
 
 #### What was the total number of rolls ordered for each hour of the day?
 ---
@@ -187,7 +193,8 @@ GROUP BY hours_bracket;
 
 Output: 
 
-![[1446-02-03 15_24_22-Query 1 - Roll and Order Metrics.sql - DESKTOP-UI79E1N_MSSQLSERVER01.FassosRolls.png]]
+![1446-02-03 15_24_22-Query 1 - Roll and Order Metrics sql - DESKTOP-UI79E1N_MSSQLSERVER01 FassosRolls](https://github.com/user-attachments/assets/88279f75-9e08-4dac-b6f9-32bf8c2c13ac)
+
 
 # Driver and Customer Experience
 ---
@@ -214,7 +221,8 @@ WHERE order_id = 10
 
 Output:
 
-![[1446-02-03 15_29_13-Query 2 - Driver and Customer Experience.sql - DESKTOP-UI79E1N_MSSQLSERVER01.Fas.png]]
+![1446-02-03 15_29_13-Query 2 - Driver and Customer Experience sql - DESKTOP-UI79E1N_MSSQLSERVER01 Fas](https://github.com/user-attachments/assets/8def3197-0f0a-4eb9-b6b9-02c12da226ca)
+
 
 #### What was the average time in minutes it took for each driver to arrive at the Fasso's HQ to pickup the order?
 ---
@@ -232,7 +240,8 @@ GROUP BY driver_id;
 
 Output: 
 
-![[1446-02-03 15_30_27-Query 2 - Driver and Customer Experience.sql - DESKTOP-UI79E1N_MSSQLSERVER01.Fas.png]]
+![1446-02-03 15_30_27-Query 2 - Driver and Customer Experience sql - DESKTOP-UI79E1N_MSSQLSERVER01 Fas](https://github.com/user-attachments/assets/f44af73d-18ff-4e9a-8403-645eef5c1051)
+
 
 #### What was the average distance travelled for each customer?
 ---
@@ -254,7 +263,8 @@ GROUP BY customer_id;
 
 Output: 
 
-![[1446-02-03 15_31_17-Query 2 - Driver and Customer Experience.sql - DESKTOP-UI79E1N_MSSQLSERVER01.Fas.png]]
+![1446-02-03 15_31_17-Query 2 - Driver and Customer Experience sql - DESKTOP-UI79E1N_MSSQLSERVER01 Fas](https://github.com/user-attachments/assets/f88303a0-59ba-4408-977a-a6056fa5e6d2)
+
 
 #### What was the average speed for each driver for each delivery?
 ---
@@ -279,7 +289,8 @@ GROUP BY order_id) b ON a.order_id = b.order_id;
 
 Output:
 
-![[1446-02-03 15_32_45-Query 2 - Driver and Customer Experience.sql - DESKTOP-UI79E1N_MSSQLSERVER01.Fas.png]]
+![1446-02-03 15_32_45-Query 2 - Driver and Customer Experience sql - DESKTOP-UI79E1N_MSSQLSERVER01 Fas](https://github.com/user-attachments/assets/9e90a2b6-f932-4430-b35c-40376ba8725a)
+
 
 #### What is the successful delivery percentage for each driver?
 ---
@@ -301,4 +312,5 @@ GROUP BY driver_id)b;
 
 Output:
 
-![[1446-02-03 15_36_56-Query 2 - Driver and Customer Experience.sql - DESKTOP-UI79E1N_MSSQLSERVER01.Fas.png]]
+![1446-02-03 15_36_56-Query 2 - Driver and Customer Experience sql - DESKTOP-UI79E1N_MSSQLSERVER01 Fas](https://github.com/user-attachments/assets/18179d96-2119-49c2-9475-3236fd77fd7a)
+
