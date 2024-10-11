@@ -1,4 +1,4 @@
-# Project Overview
+# 🌯 Project Overview
 ---
 Fassos is an online food ordering company that specializes in rolls, meaning that a variety of rolls such chicken rolls, egg rolls and veggie rolls get delivered to your doorstep. In this project, we dive into metrics and insights about this company that involve Data Exploration, Data Cleaning and Data Analysis processes. The dataset includes customer orders, IDs, driver data, product types (different types of rolls) and sales data. The project is divided into 3 sections: 
 
